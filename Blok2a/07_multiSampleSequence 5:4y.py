@@ -36,19 +36,12 @@ We will trigger events based on their eventtime.
 #______________________________________________________________________________
 
 #load 3 audioFiles and store it into a list
-samples = [ sa.WaveObject.from_wave_file("/Users/julian/Desktop/HKU/jaar\ 2/csd/CSD2a/Blok2a/samples/clap.wav"),
-            sa.WaveObject.from_wave_file("/Users/julian/Desktop/HKU/jaar\ 2/csd/CSD2a/Blok2a/samples/hat.wav"),
-            sa.WaveObject.from_wave_file("/Users/julian/Desktop/HKU/jaar\2/csd/CSD2a/Blok2a/samples/kick.wav"),]
-
+samples = [ sa.WaveObject.from_wave_file("/Users/julian/Desktop/samples/clap.wav"),
+            sa.WaveObject.from_wave_file("/Users/julian/Desktop/samples/hat.wav"),
+            sa.WaveObject.from_wave_file("/Users/julian/Desktop/samples/kick.wav"),]
 
 #set bpm
-
-
-bpm = int(input ("voor bpm in:"))
-print (bpm)
-
-
-
+bpm = 120
 #calculate the duration of a quarter note
 quarterNoteDuration = 60 / bpm
 #calculate the duration of a sixteenth note
@@ -61,9 +54,12 @@ measureDuration = beatsPerMeasure  * quarterNoteDuration
 #create a list to hold the events
 events = []
 #create lists with the moments (in 16th) at which we should play the samples
-sequence1 = [0, 2, 4, 8, 11]
-sequence2 = [3, 6, 10]
-sequence3 = [9, 13]
+#snare
+sequence1 = [4, 12]
+#hat
+sequence2 = [2 ,6 ,10, 14  ]
+#kick
+sequence3 = [0, 8, 16]
 
 #transform the sixteenthNoteSequece to an eventlist with time values
 for sixteenNoteIndex in sequence1:
@@ -93,6 +89,7 @@ keepPlaying = True
 while keepPlaying:
   #retrieve current time
   currentTime = time.time()
+
   #check if the event's time (which is at index 0 of event) is passed
   if(currentTime - startTime >= event[0]):
     #play sample -> sample index is at index 1
