@@ -49,9 +49,7 @@ print(events)
 
 #ontvang eerste event
 #NOTE: pop(0) returns and removes the element at index 0
-events2 = copy.copy(events)
 
-events.extend(events2)
 
 
 event = events.pop(0)

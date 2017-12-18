@@ -12,13 +12,15 @@ list1 = []
 list2 = []
 list3 = []
 
-def genereer():
+def genereer(list1):
     for x in range (maatsoort):
         print (x)
 
-        if kick[x] >= randint(10):
+        if kick[x] >= randint(1, 10):
             list1.append(x)
-        if clap[x] >= randint(10):
+        if clap[x] >= randint(1, 10):
             list2.append(x)
-        if hat[x] >= randint(10):
+        if hat[x] >= randint(1, 10):
             list3.append(x)
+
+# genereer()
