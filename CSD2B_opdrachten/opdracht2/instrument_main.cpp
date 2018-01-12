@@ -5,12 +5,12 @@
 int main()
 {
 
-  Piano piano(4,440);
-  piano.maak();
-  Trumpet trompet(2, 220);
-  trompet.maak();
+  Piano steinwayPiano(4,540);
+  steinwayPiano.maak();
+  Trumpet goudeTrompet(2, 220);
+  goudeTrompet.maak();
 
   return 0;
 
-  
+
 };

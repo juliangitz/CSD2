@@ -7,9 +7,9 @@ public:
 
   Trumpet(int aantal, int pitch);
   ~Trumpet();
-  void speel();
-  void maak();
+
+
 
 private:
-  int  aantal, pitch;
+
 };

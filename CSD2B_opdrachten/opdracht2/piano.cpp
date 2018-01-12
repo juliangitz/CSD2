@@ -3,31 +3,15 @@
 
 
 
-Piano::Piano(int aantal, int pitch) : instrument(aantal, pitch)
+Piano::Piano(int aantal, int pitch) : instrument(aantal, pitch, std::string(), std::string() )
 {
-  this->aantal = aantal;
-  this->pitch = pitch;
+  geluid = "ping";
+  instrumentsoort= "piano";
+//  std::cout << "inside piano" << pitch << "hz" << std::endl;
+
 }
 
 Piano::~Piano()
 {
-
-}
-
-
-void Piano::maak()
-{
-  {
-    for (int i = 0; i<aantal; i++)
-      {
-        speel();
-      }
-
-  }
-}
-void Piano::speel()
-{
-
-  std::cout << "piano, pling" << ", " << pitch << "hz" << std::endl;
 
 }

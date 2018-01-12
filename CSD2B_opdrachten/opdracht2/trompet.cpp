@@ -1,27 +1,17 @@
+#include <iostream>
+
 #include "trompet.h"
 
-Trumpet::Trumpet(int aantal, int pitch) : instrument(aantal, pitch)
+Trumpet::Trumpet(int aantal, int pitch) : instrument(aantal, pitch, std::string(), std::string())
 {
-  this->aantal = aantal;
-  this->pitch = pitch;
+
+  geluid = "pweep";
+  instrumentsoort= "trompet";
+  //std::cout << "inside trompet" << pitch << "hz" << std::endl;
+
 }
 
 Trumpet::~Trumpet()
 {
 
-}
-
-void Trumpet::maak()
-{
-  {
-    for (int i = 0; i<aantal; i++)
-      {
-        speel();
-      }
-  }
-}
-
-void Trumpet::speel()
-{
-  std::cout << "trompet, pweep" << ", " << pitch << "hz" << std::endl;
 }
