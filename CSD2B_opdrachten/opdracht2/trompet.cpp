@@ -2,12 +2,11 @@
 
 #include "trompet.h"
 
-Trumpet::Trumpet(int aantal, int pitch) : instrument(aantal, pitch, std::string(), std::string())
+Trumpet::Trumpet(int aantal, int pitch, std::string geluid, std::string instrumentsoort) : instrument(aantal, pitch, geluid, instrumentsoort)
 {
 
-  geluid = "pweep";
-  instrumentsoort= "trompet";
-  //std::cout << "inside trompet" << pitch << "hz" << std::endl;
+  geluid = "geluid";
+  instrumentsoort= "instrumentsoort";
 
 }
 

@@ -5,11 +5,18 @@
 int main()
 {
 
-  Piano steinwayPiano(4,540);
-  steinwayPiano.maak();
-  Trumpet goudeTrompet(2, 220);
-  goudeTrompet.maak();
+//define number of instances, pitch, sound and type of instrument
+  Piano steinwayPiano(4,540, "ping", "steinwayPiano");
+  Trumpet goudeTrompet(2, 450, "pweep", "goudeTrompet");
 
+
+  std::cout<<"speel los instrument: "<<std::endl;
+  goudeTrompet.speel();
+  steinwayPiano.speel();
+  
+  std::cout<<"instrumenten spelen samen: "<<std::endl;
+  goudeTrompet.speelSamen();
+  steinwayPiano.speelSamen();
   return 0;
 
 

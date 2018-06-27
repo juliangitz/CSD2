@@ -3,11 +3,10 @@
 
 
 
-Piano::Piano(int aantal, int pitch) : instrument(aantal, pitch, std::string(), std::string() )
+Piano::Piano(int aantal, int pitch, std::string geluid, std::string instrumentsoort) : instrument(aantal, pitch, geluid, instrumentsoort)
 {
-  geluid = "ping";
-  instrumentsoort= "piano";
-//  std::cout << "inside piano" << pitch << "hz" << std::endl;
+  geluid = "geluid";
+  instrumentsoort= "instrumentsoort";
 
 }
 

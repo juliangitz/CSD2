@@ -15,9 +15,12 @@ public:
 
 
   void speel();
-  void maak();
+  void speelSamen();
+
   std::string geluid;
+
   std::string instrumentsoort;
+
 private:
   int  aantal, pitch;
 

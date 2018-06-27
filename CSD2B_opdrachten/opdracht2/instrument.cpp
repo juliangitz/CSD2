@@ -4,62 +4,43 @@
 
 
 instrument::instrument(int aantal, int pitch, std::string geluid, std::string instrumentsoort)
+
 {
+  //constructor
   this->aantal = aantal;
   this->pitch = pitch;
-  //geluid= geluid;
-  //instrumentsoort= instrumentsoort;
-
-
+  this->geluid = geluid;
+  this->instrumentsoort = instrumentsoort;
 }
 
 instrument::~instrument()
 {
-
+  //deconstructor
 }
 
 
-void instrument::maak()
+void instrument::speelSamen()
 {
-  {
+{
 
-  if (instrumentsoort == "piano" && pitch >200 && pitch <740 )
+//check if the sound is between a normal pitch range
+  if (pitch >200 && pitch <740 )
   {
     for (int i = 0; i<aantal; i++)
     {
-
+//call play sound function
         speel();
 
     }
 
-}
-
-
-
-  if (instrumentsoort == "trompet" && pitch >200 && pitch <610)
-  {
-    for (int i = 0; i<aantal; i++)
-    {
-
-        speel();
-    }
   }
 
-
-
-
-
-
-  }
-
-
 }
+}
+
 void instrument::speel()
 {
-
-
-    std::cout << "inside " << instrumentsoort << " speel" << std::endl;
-    std::cout << geluid << ", " << pitch << "hz" << std::endl;
-
+//the play sound function
+    std::cout << "de " << instrumentsoort << " maakt een geluid dat klinkt als: " << geluid << ", met een frequency van " << pitch << "hz" << std::endl;
 
 }
