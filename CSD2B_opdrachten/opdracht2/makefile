@@ -12,3 +12,7 @@ trompet.o: trompet.cpp trompet.h
 
 piano.o: piano.cpp piano.h
 	g++ -c piano.cpp
+
+clean:
+	rm -f *.o
+	rm -f geluid
