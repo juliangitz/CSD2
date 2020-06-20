@@ -1,4 +1,4 @@
-create: piano.o instrument_main.o trompet.o instrument.o
+geluid: piano.o instrument_main.o trompet.o instrument.o
 	g++ -o geluid instrument.o instrument_main.o trompet.o piano.o
 
 instrument_main.o: instrument_main.cpp
