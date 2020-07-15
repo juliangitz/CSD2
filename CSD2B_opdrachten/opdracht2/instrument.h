@@ -1,29 +1,24 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 #ifndef _inst_
 #define _inst_
 
-class instrument
-{
-public:
-
-  instrument(int aantal, int pitch, std::string geluid, std::string instrumentsoort);
-
-
+class instrument {
+ public:
+  instrument(int aantal, int pitch, string geluid, string instrumentsoort);
   ~instrument();
-
 
   void speel();
   void speelSamen();
 
-  std::string geluid;
+  string geluid, instrumentsoort;
+  int pitch;
 
-  std::string instrumentsoort;
-
-private:
-  int  aantal, pitch;
-
+ private:
+  int  aantal;
 
 };
 

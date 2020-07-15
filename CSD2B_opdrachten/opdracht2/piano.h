@@ -1,13 +1,17 @@
 #include "instrument.h"
 
-class Piano : public instrument
+using namespace std;
 
-{
-public:
+class Piano : public instrument {
+ public:
+  Piano(int aantal, int pitch, string geluid, string instrumentsoort);
+  void note(int pitch);
 
-  Piano(int aantal, int pitch, std::string geluid, std::string instrumentsoort);
+  void speelAkoord(int grondtoon, int HoeveelNoten);
+
   ~Piano();
 
-private:
+ private:
+   int VolgendeNoot;
 
 };

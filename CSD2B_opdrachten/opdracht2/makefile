@@ -1,5 +1,5 @@
-geluid: piano.o instrument_main.o trompet.o instrument.o
-	g++ -o geluid instrument.o instrument_main.o trompet.o piano.o
+geluid: piano.o instrument_main.o perc.o instrument.o
+	g++ -o geluid instrument.o instrument_main.o perc.o piano.o
 
 instrument_main.o: instrument_main.cpp
 	g++ -c instrument_main.cpp
@@ -7,8 +7,8 @@ instrument_main.o: instrument_main.cpp
 instrument.o: instrument.cpp instrument.h
 	g++ -c instrument.cpp
 
-trompet.o: trompet.cpp trompet.h
-	g++ -c trompet.cpp
+trompet.o: perc.cpp perc.h
+	g++ -c perc.cpp
 
 piano.o: piano.cpp piano.h
 	g++ -c piano.cpp
